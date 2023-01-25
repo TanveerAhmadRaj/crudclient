@@ -9,6 +9,7 @@ export const usePostStore = defineStore({
     name: "",
     message: "",
   }),
+  //defining actions
    actions: {
         async getPosts() {
          const response =  await axios.get("http://localhost:5000/posts")

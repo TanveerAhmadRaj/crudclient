@@ -13,11 +13,12 @@ onMounted(()=>{
 </script>
 
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 border">
     <div class="mt-3 p-3 d-flex">
       <h4 class="text-dark">Add New Post</h4> 
-        <RouterLink :to="{name: 'add-post'}" class="btn btn-primary p-2 ml-5"> Add</RouterLink>
-      
+        <RouterLink :to="{name: 'add-post'}" class="btn btn-primary p-2 ml-5">
+           Add</RouterLink>
+      <hr class="border-bottom">
 
     </div>
     <h3 class="text-center bg-dark p-3 text-white">
@@ -35,7 +36,7 @@ onMounted(()=>{
     <tr class="text-center" v-for="post in posts.posts" :key="post.id">
       <td>{{ post.id }}</td>
       <td>{{ post.name }}</td> 
-      <td class="nav-link"><RouterLink :to="{name: 'post', params: {id: post.id}}">View</RouterLink></td>
+      <td><RouterLink :to="{name: 'post', params: {id: post.id}}"  class="nav-link">View</RouterLink></td>
       <td><button class="btn" @click="deletePost(post.id)"><i class="fa fa-trash text-danger"></i></button></td>
       <td> <RouterLink :to="{name: 'update-post', params: {id: post.id}}"><i class="fa fa-pen-to-square"></i></RouterLink></td>
     </tr>

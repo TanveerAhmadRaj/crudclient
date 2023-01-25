@@ -6,9 +6,9 @@ const post = usePostStore()
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="card shadow">
-                    <div class="card-title p-3 bg-light">
+            <div class="col-md-8 shadow p-3">
+                <div class="card  bg-light">
+                    <div class="card-title p-3">
                         <h5 class="text text-danger">Add New Post</h5>
                     </div>
                     <div class="card-body p-3">

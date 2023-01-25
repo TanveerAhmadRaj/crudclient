@@ -19,5 +19,8 @@ import { RouterLink, RouterView } from 'vue-router'
   
 </template>
 
-<style scoped>
+<style>
+.section{
+  height: 100vh;
+}
 </style>
