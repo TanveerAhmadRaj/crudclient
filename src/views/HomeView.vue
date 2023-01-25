@@ -32,7 +32,8 @@ onMounted(()=>{
       <th scope="col" colspan="2">Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <template v-if="posts.posts.length>0">
+    <tbody>
     <tr class="text-center" v-for="post in posts.posts" :key="post.id">
       <td>{{ post.id }}</td>
       <td>{{ post.name }}</td> 
@@ -41,6 +42,14 @@ onMounted(()=>{
       <td> <RouterLink :to="{name: 'update-post', params: {id: post.id}}"><i class="fa fa-pen-to-square"></i></RouterLink></td>
     </tr>
   </tbody>
+  </template>
+    <span v-else>
+      <tbody>
+    <tr class="text-danger font-weight-bold">
+      <p class="text-uppercase p-3 text-center">currently this is no data available !!!!!</p>
+    </tr>
+  </tbody>
+    </span>
 </table>
   </div>
 </template>
